@@ -1,9 +1,9 @@
 package com.m2p;
 
-public class CoinProbability {
+public class Probability {
     private final double tossProbability;
 
-    public CoinProbability(double tossProbability) {
+    public Probability(double tossProbability) {
         this.tossProbability = tossProbability;
     }
 
@@ -18,8 +18,11 @@ public class CoinProbability {
         {
             return false;
         }
-        CoinProbability that = (CoinProbability) object;
+        Probability that = (Probability) object;
         return tossProbability == that.tossProbability;
     }
 
+    public Object multiply(Probability secondEventProbability) {
+        return tossProbability * secondEventProbability.tossProbability;
+    }
 }
